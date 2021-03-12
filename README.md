@@ -2,6 +2,8 @@
 
 This template specifies the minimum information to provide to the jury to support your project. You are free to go beyond these mandatory sections to include additional explanations.
 
+
+
 ## Team and project overview 
 
 <details open="open">
@@ -27,12 +29,9 @@ Explain what next steps you envisage.
 </details>
 
 
-## Business pitch
-
-Link to your business pitch.
-
 ## Project usage
 
 Explain the prerequisites, the environment setup and the procedure and guidelines to run the code / model.
 
 It is recommended to also explain the structure of your repository / code base.
+

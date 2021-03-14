@@ -60,11 +60,11 @@ some “in between” version of “Double SARSA” where two Q matrices are mai
 <p>As we said, we couple our double SARSA with a decision tree classifier. We could have tested other classifiers to perform the inference on never seen states like random forest or support vector machines.</p></details>
 
 
-
-
 ## Project usage
 
 The notebook we use is `evaluation_notebook.ipynb` , it only uses `pymgrid` and `sklearn` with the `DiscreteEnvironment`
+
+**WARNING** : WE USE A CUSTOM `DiscreteEnvironment` with SoC fixed (if you remove the fix, our results are terrible)
 
 Here is a quick walk-through our notebook
 

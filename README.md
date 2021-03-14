@@ -1,6 +1,6 @@
-## Using this template
+## Corai
 
-This template specifies the minimum information to provide to the jury to support your project. You are free to go beyond these mandatory sections to include additional explanations.
+![CorAI](CorAI.png)
 
 
 
@@ -61,5 +61,25 @@ some “in between” version of “Double SARA” where two Q matrices are main
 
 ## Project usage
 
+The notebook we use is `evaluation_notebook.ipynb` , it only uses `pymgrid` and `sklearn` with the `DiscreteEnvironment`
 
+Here is a quick walk-through our notebook
+
+* The project dependencies are loaded and the building are loaded as well
+* `make_hyperparameters` build a dictionary which contains the hyper-parameters for the model
+  * `C` is the initial value of `Q`
+  * `alpha` is the learning rate in the Bellman equation
+  * `omega` is the exponent in the `alpha`-decay rule
+  * `discount_factor` is the discount in Bellman equation
+  * `epsilon` is the epsilon initial value in the QLearning algorithm. `epsilon_min` is its minimal value, `expsilon_decay` is the parameter of the decay function (exponential is `epsilon_expo` otherwise it's linear)
+  * `train_days` number of days used (Q-Transfer)
+  * `train_episodes` number of episodes used
+  * `train_episodes_decay` episode decay (Q-Transfer)
+* `test` uses only the output of the SARSA algorithm (Q matrices) to test the model
+* `test_ml` integrates our classifier for testing the model
+* `train` estimates the Q matrices using the parameters in `p` and an environment `env`
+* `build_clf` builds the decision tree (and its dataset) based on Q matrices
+* `benchmark` performs the full benchmark with parameter `p`
+
+Running all the cells of the notebook performs the benchmark with our optimal params.
 
